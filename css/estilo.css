@@ -217,4 +217,45 @@ header .navbar {
     border: 1px solid #fff;
 }
 /* Footer e contato */
-
+#contato-area {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    background-color: #e7723a;
+}
+.text-center img {
+    box-shadow: 0.3rem 0.4rem 2px rgba(0, 0, 0, 0.8);
+}
+.footer-box {
+   margin-top: 4rem;
+   padding: 1rem 0;  
+}
+.footer-box h2 {
+    font-weight: 600;
+}
+.footer-box h2::after {
+    content: '';
+    border-top: 2px solid #343a40;
+    position: absolute;
+    width: 27%;
+    top: 55%;
+    left: 2%;
+}
+.footer-box p {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.copyright {
+   
+    padding-bottom: 0;
+    background-color: #8b9a25;
+   height: 3rem;
+   padding: 1rem 0;
+}
+.copyright p {
+    text-align: center;
+}
+.copyright a {
+    color: #343a40;
+    text-decoration: none;
+    font-weight: bold;
+}
