@@ -1,6 +1,7 @@
 /* Gerai */
 body {
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .row {
@@ -38,6 +39,7 @@ header .navbar {
 
 /* Sessão de banner */
 .container-fluid {
+    overflow: hidden;
     padding: 0;
 }
 #home {
@@ -98,6 +100,21 @@ header .navbar {
     padding: 2rem, 0;
     background-color: #e7723a;
 }
+.anime-left {
+    opacity: 0;
+    transform: translate3D(-100px, 0, 0);
+    transition: .5s ease;
+}
+.anime-right {
+    opacity: 0;
+    transform: translate3D(100px, 0, 0);
+    transition: .5s ease;
+}
+.anime-start {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    
+}
 .sobre-box h2 {
     margin-top: 5rem;
     margin-left: 40px;
@@ -145,6 +162,7 @@ header .navbar {
 .card-box {
     position: relative;
 }
+
 .card {
     margin-top: 4rem;
     width: 20rem;
@@ -153,14 +171,27 @@ header .navbar {
     border: none;
     transition: .5s;
     cursor: pointer;
+    position: relative;
+    position: relative;
 }
-.card:hover {
-    opacity: .9;
+.card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #e7723a99;
+    transition: .7s ease;
 }
+.card:hover::before {
+    height: 100%;
+}
+
 .card img {
     width: 100%;
     height: 100%;
-    opacity: .8;
+    /*opacity: .6;*/ 
     background-color: #000;
     box-shadow: 0.3rem 0.2rem 2px rgba(0, 0, 0, 0.8);
 }
@@ -169,6 +200,7 @@ header .navbar {
     bottom: 14rem;
     left: 5rem;  
 }
+
 .text-card h3 {
     color: #fff;
     text-transform: uppercase;
@@ -208,13 +240,14 @@ header .navbar {
     color: #343a40;
     text-transform: uppercase;
     border: 1px solid #343a40;
-    background-color: transparent;
-    transition: .5s;   
+    background-color: #e7723a;
+    transition: .5s;
 }
+
 #cardapio-area .btn-menu:hover {
-    opacity: .8;
     color: #fff;
     border: 1px solid #fff;
+    
 }
 /* Footer e contato */
 #contato-area {
