@@ -38,4 +38,40 @@ $(document).ready(function() {
 
     }());
 
-})
+
+    // Scroll para link interno
+
+    let navBtn = $('.nav-item');
+
+    let bannerSection = $('#home');
+    let sobreSection = $('#sobre-area');
+    let especialidadesSection = $('#especialidades-area');
+    let cardapioSection = $('#cardapio-area');
+    let contatoSection = $('#contato-area');
+
+    let scrollTo = '';
+
+    $(navBtn).click(function() {
+
+        let btnId = $(this).attr('id');
+
+        if(btnId == 'sobre-menu') {
+            scrollTo = sobreSection;
+        } else if(btnId == 'especialidades-menu') {
+            scrollTo = especialidadesSection;
+        } else if(btnId == 'cardapio-menu') {
+            scrollTo = cardapioSection;
+        } else if(btnId == 'contato-menu') {
+            scrollTo = contatoSection;
+        } else {
+            scrollTo = bannerSection;
+        }
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(scrollTo).offset().top - 70
+        }, 1500);
+
+
+    });
+
+});
