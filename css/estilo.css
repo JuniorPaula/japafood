@@ -249,6 +249,13 @@ header .navbar {
     border: 1px solid #fff;
     
 }
+.modal-content {
+    background-color: #e7723a99;
+}
+.modal-header {
+    color: #fff;
+    text-transform: uppercase;
+}
 /* Footer e contato */
 #contato-area {
     margin-top: 2rem;
@@ -291,4 +298,121 @@ header .navbar {
     color: #343a40;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    /* geral */
+    .container {
+        padding: 20px 0;
+    }
+    #home {
+        height: auto;
+    }
+    .banner {
+        left: 20%;
+    }
+    /* Sessao sobre */
+    .sobre-box h2 {
+        margin-top: 2rem;
+    }
+    .sobre-box h2::after {
+        content: '';
+        border-top: 1px solid #343a40;
+        width: 18%;
+        position: absolute;
+        top: 55px;
+        left: 20%;
+    }
+    .sobre-box p {
+        margin-top: 20px;
+    }
+    /* Sessao de especialidades */
+    .text-header {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .main-title::after {
+        content: '';
+        border-top: 2px solid #343a40;
+        width: 25%;
+        position: absolute;
+        top: 45px;
+        left: 6.5%;
+    }
+    .card {
+        width: auto;
+    }
+    .text-card {
+        left: 2rem;
+    }
+
+    /* Sessao de cardapio */
+    #cardapio-area h2::after {
+        content: '';
+        border-top: 2px solid #343a40;
+        position: absolute;
+        width: 18%;
+        top: 5%;
+        left: 6.5%;
+    }
+    #cardapio-area .btn-menu {
+        width: auto;
+        height: auto;
+    }
+
+    /* Sessao de contato */
+    .footer-box h2::after {
+        content: '';
+        border-top: 2px solid #343a40;
+        position: absolute;
+        width: 30%;
+        top: 55%;
+        left: 9%;
+    }
+
+}
+
+@media(max-width: 425px) {
+    .banner h1 {
+        font-size: 3rem;
+    }
+    /* Sessao de especialidades */
+    .main-title::after {
+        content: '';
+        border-top: 2px solid #343a40;
+        width: 65%;
+        position: absolute;
+        top: 45px;
+        left: 7.5%;
+    }
+    .card {
+        margin-top: 2rem;
+    }
+    .text-card {
+        left: 5rem;
+    }
+    /* sessao de cardapio */
+    #cardapio-area .btn-menu {
+        margin-bottom: 1rem;
+    }
+    /* Sessao de contato */
+    .footer-box {
+        margin-top: 0;
+        padding-left: 1rem;
+    }
+    .footer-box h2::after {
+        content: '';
+        border-top: 2px solid #343a40;
+        position: absolute;
+        width: 30%;
+        top: 65%;
+        left: 7%;
+    }
+    .copyright {
+        padding: 0;
+    }
+    .copyright p {
+        margin-bottom: 0;
+    }
 }
